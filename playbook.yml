@@ -1,0 +1,9 @@
+---
+# File: playbook.yml
+# Type: playbook
+
+- name: Execute playbook
+  hosts: all
+  sudo: yes
+  roles:
+    - mongo-tools

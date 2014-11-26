@@ -1,0 +1,13 @@
+---
+- apt_key: keyserver=keyserver.ubuntu.com id=7F0CEB10
+
+- name: Add MongoDB repo
+  apt_repository:
+    repo: "deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen"
+    state: present
+    update_cache: yes
+
+- name: Install MongoDB Tools
+  apt:
+    pkg: "mongodb-org-tools"
+    state: present
